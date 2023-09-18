@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changing_img</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <div class="" style="max-width: 400px;">
+        <div class="" style="text-align: center;">
+            <button id="button1">Change Img src [1]</button>
+            <button id="button2">Change Img src [2]</button>
+            <button id="button3">Change Img src [3]</button>
+            <button id="button4">Change Img src [4]</button>
+        </div>
+        <div class="" style="margin-top: 20px;">
+            <img id="image" src="https://wallpapercave.com/wp/wp2599603.jpg" alt="">
+        </div>
+    </div>
+
+
+    <style>
+        body{
+            background-color: rgb(61, 22, 22);
+            color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+        button{
+            border: 1px dashed  #F5F5F5;
+            background-color: transparent;
+            color: #F5F5F5;
+            padding:10px;
+            transition: 0.2s;
+            margin: 5px;
+        }
+        button:hover{
+            background-color: antiquewhite;
+            color: black;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+            max-height: 250px;
+            border-radius: 15px;
+        }
+
+    </style>
+
+<script>
+
+    // step - 1
+    document.getElementById("button1") // id name "button"
+    document.getElementById("button2") // id name "button"
+    document.getElementById("button3") // id name "button"
+    document.getElementById("button4") // id name "button"
+    // step - 2
+    console.log(document.getElementById("button1"))
+    console.log(document.getElementById("button2"))
+    console.log(document.getElementById("button3"))
+    console.log(document.getElementById("button4"))
+    //step - 3
+    // declare a variable 
+    const button1 = document.getElementById("button1");
+    const button2 = document.getElementById("button2");
+    const button3 = document.getElementById("button3");
+    const button4 = document.getElementById("button4");
+    // step - 4
+    document.getElementById("image");
+    // step - 5
+    console.log(document.getElementById("image"))
+    //step - 6
+    // declare a variable 
+     const image = document.getElementById("image");
+
+    // finally click button , change image content
+    button1.addEventListener("click",function (params) {
+        image.src =  "https://www.pixelstalk.net/wp-content/uploads/images6/Nature-Wallpaper-HD-Free-download.jpg"
+    }) 
+    button2.addEventListener("click",function (params) {
+        image.src ="https://cdn.wallpapersafari.com/55/76/f2aVRC.jpg"
+    }) 
+    button3.addEventListener("click",function (params) {
+        image.src = "https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_640.jpg"
+    }) 
+    button4.addEventListener("click",function (params) {
+        image.src = "https://c4.wallpaperflare.com/wallpaper/558/777/255/8k-ultra-hd-mountain-lake-nature-wallpaper-preview.jpg"
+    }) 
+    // addEventListener is method , 
+    //click is a event
+    // innerHTML = to use change content
+
+
+</script>
+</body>
+</html>
